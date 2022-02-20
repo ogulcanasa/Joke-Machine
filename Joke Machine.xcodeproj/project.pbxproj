@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A68F0E227C23AAE00287073 /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68F0E127C23AAE00287073 /* Jokes.swift */; };
 		6A7250DC27BD9CF40049A9A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7250DB27BD9CF40049A9A8 /* AppDelegate.swift */; };
 		6A7250DE27BD9CF40049A9A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7250DD27BD9CF40049A9A8 /* SceneDelegate.swift */; };
 		6A7250E027BD9CF40049A9A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7250DF27BD9CF40049A9A8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A68F0E127C23AAE00287073 /* Jokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
 		6A7250D827BD9CF40049A9A8 /* Joke Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joke Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7250DB27BD9CF40049A9A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A7250DD27BD9CF40049A9A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A68F0E427C25D4500287073 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A68F0E127C23AAE00287073 /* Jokes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A68F0E527C25D5100287073 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A7250E127BD9CF40049A9A8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A68F0E627C25D6600287073 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A7250DF27BD9CF40049A9A8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6A7250CF27BD9CF40049A9A8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +84,9 @@
 			children = (
 				6A7250DB27BD9CF40049A9A8 /* AppDelegate.swift */,
 				6A7250DD27BD9CF40049A9A8 /* SceneDelegate.swift */,
-				6A7250DF27BD9CF40049A9A8 /* ViewController.swift */,
-				6A7250E127BD9CF40049A9A8 /* Main.storyboard */,
+				6A68F0E427C25D4500287073 /* Model */,
+				6A68F0E527C25D5100287073 /* View */,
+				6A68F0E627C25D6600287073 /* Controller */,
 				6A7250E427BD9CF40049A9A8 /* Assets.xcassets */,
 				6A7250E627BD9CF40049A9A8 /* LaunchScreen.storyboard */,
 				6A7250E927BD9CF40049A9A8 /* Info.plist */,
@@ -140,6 +167,7 @@
 			files = (
 				6A7250E027BD9CF40049A9A8 /* ViewController.swift in Sources */,
 				6A7250DC27BD9CF40049A9A8 /* AppDelegate.swift in Sources */,
+				6A68F0E227C23AAE00287073 /* Jokes.swift in Sources */,
 				6A7250DE27BD9CF40049A9A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
