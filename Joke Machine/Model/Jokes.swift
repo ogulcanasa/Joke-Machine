@@ -1,6 +1,6 @@
 import UIKit
 
-class Jokes: Decodable {
+class Jokes : Decodable {
     let id : Int
     let type : String
     let setup : String

@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabel.textColor = UIColor.white
-        punchlineLabel.textColor = UIColor.white
-        buttonLabel.titleLabel?.textColor = UIColor.white
+        changeTextColorOfViewDidLoad()
     }
 
     func getData(from url: String, _ completion: @escaping (Bool) -> Void) {
@@ -63,6 +61,12 @@ class ViewController: UIViewController {
             setupLabel.text = ""
             punchlineLabel.text = ""
         }
+    }
+    
+    func changeTextColorOfViewDidLoad() {
+        setupLabel.textColor = UIColor.white
+        punchlineLabel.textColor = UIColor.white
+        buttonLabel.titleLabel?.textColor = UIColor.white
     }
 }
 
