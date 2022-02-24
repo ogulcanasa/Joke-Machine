@@ -70,7 +70,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Tell me a joke!"/>
                                                         <connections>
-                                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YC-pO-s4a"/>
+                                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7C-6f-Gw5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
