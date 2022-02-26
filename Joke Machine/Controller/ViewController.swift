@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             }
         }
         sender.setTitle("What's the answer?", for: .normal)
+        timer.invalidate()
         } else if (buttonLabel.titleLabel?.text == "What's the answer?") {
             punchlineLabel.isHidden = false
             punchlineLabel.text = jokes?.punchline
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
         }
     }
     @objc func fieldsClearer() {
-        if buttonLabel.titleLabel?.text != "What's the answer?" {
+        if buttonLabel.titleLabel?.text != "What's the answer" {
             setupLabel.text = ""
             punchlineLabel.text = ""
         }
