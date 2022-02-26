@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabel.textColor = UIColor.white
-        punchlineLabel.textColor = UIColor.white
-        buttonLabel.titleLabel?.textColor = UIColor.white
+        changeTextColorOfViewDidLoad()
     }
 
     func getData(from url: String, _ completion: @escaping (Bool) -> Void) {
@@ -38,7 +36,7 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    @IBAction func buttonClicked(_ sender: Any) {
+    @IBAction func buttonClicked(_ sender: UIButton) {
         if (buttonLabel.titleLabel?.text == "Tell me a joke!") { getData(from: url) { completed in
             if completed {
                 DispatchQueue.main.async { [self] in
@@ -49,20 +47,26 @@ class ViewController: UIViewController {
                 print("fail case")
             }
         }
-        (sender as AnyObject).setTitle("What's the answer?", for: .normal)
+        sender.setTitle("What's the answer?", for: .normal)
+        timer.invalidate()
         } else if (buttonLabel.titleLabel?.text == "What's the answer?") {
             punchlineLabel.isHidden = false
             punchlineLabel.text = jokes?.punchline
-            (sender as AnyObject).setTitle("Tell me a joke!", for: .normal)
+            sender.setTitle("Tell me a joke!", for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fieldsClearer), userInfo: nil, repeats: false)
         }
     }
-    
     @objc func fieldsClearer() {
-        if (setupLabel.text != "" && punchlineLabel.text != "") {
+        if buttonLabel.titleLabel?.text != "What's the answer" {
             setupLabel.text = ""
             punchlineLabel.text = ""
         }
+    }
+    
+    func changeTextColorOfViewDidLoad() {
+        setupLabel.textColor = UIColor.white
+        punchlineLabel.textColor = UIColor.white
+        buttonLabel.titleLabel?.textColor = UIColor.white
     }
 }
 
